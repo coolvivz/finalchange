@@ -1,0 +1,33 @@
+{
+    "spatialacc": {
+        "object_owner": {
+            "schema_privileges": [
+                {
+                    "schema": "CIARW",
+                    "privileges_with_grant_option": [
+                        "SELECT",
+                        "INSERT",
+                    
+                        "UPDATE",
+                        "DELETE",
+                        "EXECUTE"
+                    ]
+                }
+            ]
+        },
+        "application_user": {
+            "schema_privileges": [
+                {
+                    "schema": "CIARW",
+                    "privileges": [
+                        "SELECT",
+                        "INSERT",
+                        "UPDATE",
+                        "DELETE",
+                        "EXECUTE"
+                    ]
+                }
+            ]
+        }
+    }
+}

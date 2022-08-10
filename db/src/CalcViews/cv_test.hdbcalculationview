@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="cv_test" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="cv_test"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="HC_COMDATA">
+    <resourceUri>HC_COMDATA</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="ID_EQUIPO"/>
+      <viewAttribute id="NOMBRE_CONDUCTOR"/>
+      <viewAttribute id="PLACA_VEHICULO"/>
+      <viewAttribute id="ID_ALERTA"/>
+      <viewAttribute id="DESCRIPCION_ALERTA"/>
+      <viewAttribute id="TIME_CONSULTA"/>
+      <viewAttribute id="LATITUD"/>
+      <viewAttribute id="LONGITUD"/>
+      <viewAttribute id="ALTITUD"/>
+      <viewAttribute id="VELOCIDAD"/>
+      <viewAttribute id="KILOMETRAJE"/>
+      <viewAttribute id="CURSO"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="HC_COMDATA"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ID"/>
+    </attribute>
+    <attribute id="NOMBRE_CONDUCTOR" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NOMBRE_CONDUCTOR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="NOMBRE_CONDUCTOR"/>
+    </attribute>
+    <attribute id="PLACA_VEHICULO" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PLACA_VEHICULO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PLACA_VEHICULO"/>
+    </attribute>
+    <attribute id="DESCRIPCION_ALERTA" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DESCRIPCION_ALERTA"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DESCRIPCION_ALERTA"/>
+    </attribute>
+    <attribute id="TIME_CONSULTA" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TIME_CONSULTA"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TIME_CONSULTA"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="ID_EQUIPO" order="2" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ID_EQUIPO"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ID_EQUIPO"/>
+    </measure>
+    <measure id="ID_ALERTA" order="5" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ID_ALERTA"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ID_ALERTA"/>
+    </measure>
+    <measure id="LATITUD" order="8" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LATITUD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LATITUD"/>
+    </measure>
+    <measure id="LONGITUD" order="9" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LONGITUD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LONGITUD"/>
+    </measure>
+    <measure id="ALTITUD" order="10" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ALTITUD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ALTITUD"/>
+    </measure>
+    <measure id="VELOCIDAD" order="11" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="VELOCIDAD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="VELOCIDAD"/>
+    </measure>
+    <measure id="KILOMETRAJE" order="12" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="KILOMETRAJE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="KILOMETRAJE"/>
+    </measure>
+    <measure id="CURSO" order="13" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="CURSO"/>
+      <measureMapping columnObjectName="Projection_1" columnName="CURSO"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="58" y="249"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
